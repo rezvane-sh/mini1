@@ -2,10 +2,10 @@ import os
 
 # تابع برای جستوجو
 def search(files , string):
-    for file in os.listdir(files):
+    for file in os.listdir(files): #دسترسی به فایل ها
         i=1
-        with open(os.path.join(files , file) , 'r' , encoding="utf-8") as filee:
-            for str in filee:
+        with open(os.path.join(files , file) , 'r' , encoding="utf-8") as filee: # باز کردن فایل 
+            for str in filee: # جستجوی خط به خط
                 if string in str:   
                      print(f"string ***{string}*** found in {file}: line={i}")
                 i+=1
